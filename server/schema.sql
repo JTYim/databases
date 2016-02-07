@@ -3,22 +3,22 @@ USE chat;
 
 CREATE TABLE messages (
   msgID int NOT NULL AUTO_INCREMENT,
-  createdAt TIMESTAMP,
-  message VARCHAR(150), 
   userID int NOT NULL,
+  message VARCHAR(150) NOT NULL, 
   roomID int NOT NULL,
+  -- createdAt TIMESTAMP,
   PRIMARY KEY (msgID) 
 );
 
 CREATE TABLE users (
   userID int NOT NULL AUTO_INCREMENT,
-  userName VARCHAR(15),
+  userName VARCHAR(15) NOT NULL,
   PRIMARY KEY (userID)
 );
 
-CREATE TABLE room (
+CREATE TABLE rooms (
   roomID int NOT NULL AUTO_INCREMENT,
-  roomName VARCHAR(20),
+  roomName VARCHAR(25),
   PRIMARY KEY (roomID)
 );
 
